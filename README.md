@@ -1,1 +1,127 @@
-# Hackiiit-26
+# Research Discuss
+
+## Problem Statement
+
+Research students and faculty often rely on fragmented communication channels such as emails, messaging applications, and informal forums to discuss technical questions, share resources, and identify recurring conceptual doubts. This results in:
+
+- Repeated questions without a structured knowledge base  
+- Loss of valuable discussions over time  
+- Difficulty in discovering relevant prior discussions or related work  
+- Absence of a centralized, research-oriented discussion platform  
+
+The objective of this project is to build a **centralized research discussion platform** that supports structured queries, collaborative discussion, and the gradual evolution of frequently asked research questions into a curated FAQ system.
+
+---
+
+## Solution Approach
+
+**Research Discuss** is a web-based platform designed specifically for academic and research-oriented discussions.
+
+The key design principles are:
+
+- **Query-first design**: Users post clearly defined research queries with descriptions and tags  
+- **Structured discussions**: Each query has a dedicated discussion page with threaded replies and attachments  
+- **FAQ evolution**: Repeated or frequently occurring queries are automatically tracked and promoted as FAQ candidates  
+- **Tag-based discovery**: Queries and blogs are organized using research-domain tags  
+- **Separation of concerns**: Blogs, queries, FAQs, and user profiles are distinct but interconnected  
+
+The system balances open discussion with long-term knowledge consolidation, making it suitable for a research-focused academic environment.
+
+---
+
+## Tech Stack Used
+
+### Frontend
+- Next.js (App Router)
+- React
+- TypeScript
+- Material UI (MUI)
+- CSS Modules
+
+### Backend
+- Next.js API Routes
+- Node.js
+- MongoDB
+- Mongoose
+
+### Authentication
+- JSON Web Tokens (JWT)
+- Cookie-based authentication
+
+---
+
+## Key Features
+
+- Posting and browsing research queries  
+- Tag-based filtering (e.g., Machine Learning, Systems, VLSI, Theory)  
+- Threaded discussions on each query  
+- File attachments for queries  
+- Blog system with preview and full-content modal  
+- FAQ system generated from repeated queries  
+- User profiles with “My Queries” and “My Blogs”  
+- Delete functionality for user-owned queries  
+- Anonymous posting option  
+- Fully responsive design for desktop and mobile devices  
+
+---
+
+## Instructions to Run the Code
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/hackiiit/hackiiit-26-team-south-mess.git
+cd research-discuss
+```
+
+### 2. Install dependencies
+```bash
+npm install
+npm install @mui/material@latest @mui/system@latest @emotion/react @emotion/styled
+```
+### 3. Create environment variables
+```bash
+MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+NEXT_PUBLIC_BASE_URL=http://localhost:3000
+CAS_BASE_URL=https://login.iiit.ac.in/cas
+CAS_SERVICE_URL=http://localhost:3000/api/auth/callback
+NEXT_PUBLIC_CAS_BASE_URL=https://login.iiit.ac.in/cas
+```
+### 4. Run the development server
+```bash
+npm run dev
+```
+### 5. Open in a browser
+```bash
+http://localhost:3000
+```
+## Previous Work / References
+
+- Conceptual inspiration from:
+  - Stack Overflow (question–answer structure)
+  - Academic and research discussion forums
+- No existing open-source project was directly forked or used as a base
+- UI components were implemented using CSS and Material UI
+
+---
+
+## AI Tool Usage Disclosure
+
+AI tools were used responsibly during development:
+
+- **ChatGPT**
+  - Code debugging and refactoring assistance
+  - UI/UX improvement suggestions
+  - README drafting and documentation structuring
+  - Error diagnosis and explanation
+
+All AI-generated outputs were reviewed, modified, and manually integrated.  
+No AI-generated code was used without verification or understanding.
+
+---
+
+## Security and Privacy Notice
+
+- No `.env` files or API keys are committed to the repository
+- No secrets or credentials are exposed
+- All sensitive configuration is managed through environment variables
